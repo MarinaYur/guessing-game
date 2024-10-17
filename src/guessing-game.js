@@ -10,16 +10,16 @@ class GuessingGame {
     }
 
     guess() {
-        this.guessNumber = Math.random() * (this.max - this.min) + this.min;
+        this.guessNumber = Math.floor((this.max + this.min) / 2 + 0.5);
         return this.guessNumber;
     }
 
     lower() {
-        return this.min = this.guessNumber;
+        return this.max = this.guessNumber;
     }
 
     greater() {
-        return this.max = this.guessNumber;
+        return this.min = this.guessNumber;
     }
 }
 
